@@ -1,0 +1,208 @@
+/* Reset de Estilos */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: var(--baseLightColor, white);
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+    display: block;
+}
+
+
+
+/* Variáveis */
+
+body {
+    --baseLightColor: #ffffff;
+    --baseDarkColor: #000000;
+    --errorColor: #ff0000;
+    --complementColor: #3ccc87;
+    --lowerBackgroundContrast: #fd5e84;
+}
+
+
+
+/* Estilização */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url("../assets/bg-repeat.jpg");
+    background-size: auto 100vh;
+    background-repeat: repeat;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.bloco-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 37.8rem;
+    width: 34rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
+
+.texto-principal {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.subtexto {
+    margin-top: 1.1rem;
+}
+
+.estrutura-formulario {
+    padding: 2.1rem 2.1rem;
+    background-color: var(--baseLightColor, white);
+}
+
+.sr-only {
+    /* Título dos campos apenas para leitura de tela, que se mantém invisível para os
+    demais usuários */
+    position: absolute;
+    width: 0.01rem;
+    height: 0.01rem;
+    padding: 0;
+    margin: -0.1rem;
+    overflow: hidden;
+    clip: rect(0.01rem, 0.01rem, 0.01rem, 0.01rem);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.campo {
+    height: 3.5rem;
+    padding: 0.8rem 1rem 0.9rem 1rem;
+    border: solid 0.13rem var(--baseDarkColor, black);
+    color: var(--baseDarkColor, black);
+}
+
+.campo-erro {
+    border: solid 2px var(--errorColor, red);
+}
+
+.formulario {
+    width: 29.8rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+.subtexto, .formulario {
+    font-size: 1.5rem;
+}
+
+.estrutura-formulario textarea {
+    height: 10rem;
+}
+
+.aviso {
+    margin-bottom: 0.6rem;
+}
+
+section:last-of-type .aviso {
+    /* O aviso inicial precisa ter o mesmo espaçamento entre ele e o campo "Mensagem"
+    quanto ele e o último aviso de erro */
+    margin: 0;
+}
+
+.aviso-erro {
+    font-size: 0.8rem;
+    color: var(--errorColor, red);
+    opacity: 0;
+    cursor: default;
+}
+
+section:last-of-type .aviso-erro {
+    /* O último aviso de erro precisa desocupar espaço no layout para aproximar o 
+    campo "Mensagem" e o aviso inicial */
+    display: none;
+}
+
+.mostrar-aviso-erro {
+    opacity: 1;
+    cursor: text;
+}
+
+section:last-of-type .mostrar-aviso-erro {
+    display: block;
+}
+
+#aviso-inicial {
+    font-size: 1.5rem;
+    color: var(--baseDarkColor, black);
+    margin-top: 0.6rem;
+}
+
+.botao-enviar {
+    background-color: var(--complementColor, limegreen);
+    height: 4.1rem;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: auto;
+    transition: all 0.2s ease;
+}
+
+.botao-enviar:hover {
+    box-shadow: 0px 0px 6px black;
+}
+
+.atribuicao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70.4rem;
+}
+
+.atribuicao a {
+    transition: all 0.2s ease;
+}
+
+.atribuicao a:hover {
+    font-weight: 900;
+    color: var(--lowerBackgroundContrast, deeppink);
+}
+
+.mensagem {
+    text-align: center;
+    position: fixed;
+    z-index: 100;
+    font-size: 1.05rem;
+    font-weight: 500;
+    height: 7rem;
+    width: 18rem;
+    bottom: 80%;
+    padding: 2.1rem;
+    opacity: 0;
+    border-radius: 0.4rem;
+    background-color: var(--baseLightColor, white);
+    color: var(--baseDarkColor, black);
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    box-shadow: 0px 0px 5px black;
+}

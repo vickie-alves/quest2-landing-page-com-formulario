@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <title>Quest #2 - Formulário</title>
+</head>
+<body>
+    <main>
+        <aside id="caixa-texto" class="bloco-conteudo estrutura-texto">
+            <article>
+                <h1 class="texto-principal">FICOU COM DÚVIDA?</h1>
+                <h1 class="texto-principal">NOS MANDE UMA MENSAGEM!</h1>
+                <p class="subtexto">caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.</p>
+            </article>
+        </aside>
+        <form id="formulario" class="bloco-conteudo estrutura-formulario" novalidate>
+            <section>
+                <label class="sr-only" for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" class="campo formulario" required placeholder="Nome Completo *">
+                <p class="aviso aviso-erro">campo obrigatório</p>
+            </section>
+            <section>
+                <label class="sr-only" for="email">Email</label>
+                <input type="email" name="email" id="email" class="campo formulario" required placeholder="Email *">
+                <p class="aviso aviso-erro">campo obrigatório</p>
+            </section>
+            <section>
+                <label class="sr-only" for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" class="campo formulario" required placeholder="Telefone *">
+                <p class="aviso aviso-erro">campo obrigatório</p>
+            </section>
+            <section>
+                <label class="sr-only" for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" class="campo formulario" rows="4" required placeholder="Mensagem *"></textarea>
+                <p class="aviso aviso-erro">campo obrigatório</p>
+            </section>
+            <p id="aviso-inicial" class="aviso">*campos obrigatórios</p>
+            <button class="botao-enviar formulario" type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer class="atribuicao">
+        <p>Desafio proposto por <a href="#" target="_blank">DevQuest</a></p>
+        <p>Código escrito por <a href="https://github.com/vickie-alves" target="_blank">Victoria Alves</a></p>
+    </footer>
+    <script src="./src/scripts/index.js"></script>
+</body>
+</html>
