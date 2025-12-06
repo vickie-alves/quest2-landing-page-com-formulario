@@ -32,7 +32,7 @@ Foi proposto a replicação do design apresentado na plataforma Figma, garantind
 
 ## Links
 
-* **Live Site URL:** (Adicionar o link da sua página hospedada (GitHub Pages, Vercel, Netlify, etc.))
+* **Live Site URL:** (https://vickie-alves.github.io/quest2-landing-page-com-formulario/)
 
 ## Autor
 
